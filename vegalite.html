@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embedding Vega-Lite</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
+</head>
+<body>
+
+  <div id="vis"></div>
+
+  <script type="text/javascript">
+    var yourVlSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "data": {"url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQpi7B9vDDlHqHd6U88515HYtZDgJqfasbVZ1DWqMyZ6E-6rsNMKdNUXapOsohcdtU5fwZhf6ezbGDo/pub?gid=0&single=true&output=csv","format":{"type":"csv"}},
+  "transform": [{"filter": "datum.symbol==='GOOG'"}],
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "price", "type": "quantitative"}
+  }
+}
+
+    vegaEmbed("#vis", yourVlSpec);
+  </script>
+</body>
+</html>
