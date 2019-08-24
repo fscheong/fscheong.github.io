@@ -1,5 +1,5 @@
-city	black	white	yellow	green	red	orange	purple
-"NY"	2	13	2	14	7	12	7
-"SF"	10	5	15	25	1	19	30
-"LA"	77	23	12	34	45	56	65
-"DC"	30	30	10	13	24	26	1
+city,black,white,yellow,green,red,orange,purple
+"NY",2,13,2,14,7,12,7
+"SF",10,5,15,25,1,19,30
+"LA",77,23,12,34,45,56,65
+"DC",30,30,10,13,24,26,1
